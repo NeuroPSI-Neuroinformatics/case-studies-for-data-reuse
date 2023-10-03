@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Generated or downloaded data that shouldn't be tracked
+ext-d000001_ADNeuronModel_pub
+10.25493-93YQ-6QM/figures
