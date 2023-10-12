@@ -16,5 +16,9 @@ test-10-25493-YJFW-HPY:
     - . $SPACK_PATH/spack/var/spack/environments/$SPACK_NFS_ENV/load_env.sh
     # list available kernels
     - jupyter kernelspec list
+    # download data, to avoid having to get an auth token in the notebook
+    - mkdir -p 10.25493-YJFW-HPY/downloads
+    - curl -o 10.25493-YJFW-HPY/downloads/ext-d000001_ADNeuronModel_pub.zip https://data.kg.ebrains.eu/zip?container=https://object.cscs.ch/v1/AUTH_c0a333ecf7c045809321ce9d9ecdfdea/ext-d000001_ADNeuronModel_pub
     # execute notebook
-    - jupyter nbconvert --to notebook --execute --ExecutePreprocessor.kernel_name=python3 10.25493-YJFW-HPY/SalgueiroPereiraMarie2020.ipynb --output=10.25493-YJFW-HPY/SalgueiroPereiraMarie2020_new.ipynb
+    - cd 10.25493-YJFW-HPY
+    - jupyter nbconvert --to notebook --execute --ExecutePreprocessor.kernel_name=python3 SalgueiroPereiraMarie2020.ipynb --output=SalgueiroPereiraMarie2020_new.ipynb
