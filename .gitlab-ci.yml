@@ -1,0 +1,18 @@
+stages:
+  - test
+
+test-10-25493-YJFW-HPY:
+  stage: test
+  only:
+    variables:
+      - $CI_COMMIT_BRANCH == "main"
+  tags:
+    - docker-runner
+  variables:
+    SPACK_PATH: /mnt/spack_v0.20.0
+    SPACK_NFS_ENV: ebrains-runner-build
+  script:
+    # load spack environment
+    - . $SPACK_PATH/spack/var/spack/environments/$SPACK_NFS_ENV/load_env.sh
+    # execute notebook
+    - jupyter nbconvert --to notebook --execute 10.25493-YJFW-HPY/SalgueiroPereiraMarie2020.ipynb --output=10.25493-YJFW-HPY/SalgueiroPereiraMarie2020_new.ipynb
