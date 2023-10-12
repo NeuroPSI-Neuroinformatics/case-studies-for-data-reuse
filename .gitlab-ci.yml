@@ -14,5 +14,7 @@ test-10-25493-YJFW-HPY:
   script:
     # load spack environment
     - . $SPACK_PATH/spack/var/spack/environments/$SPACK_NFS_ENV/load_env.sh
+    # list available kernels
+    - jupyter kernelspec list
     # execute notebook
-    - jupyter nbconvert --to notebook --execute 10.25493-YJFW-HPY/SalgueiroPereiraMarie2020.ipynb --output=10.25493-YJFW-HPY/SalgueiroPereiraMarie2020_new.ipynb
+    - jupyter nbconvert --to notebook --execute --ExecutePreprocessor.kernel_name=python3 10.25493-YJFW-HPY/SalgueiroPereiraMarie2020.ipynb --output=10.25493-YJFW-HPY/SalgueiroPereiraMarie2020_new.ipynb
