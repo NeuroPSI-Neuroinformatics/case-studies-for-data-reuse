@@ -1,0 +1,285 @@
+{
+    "case-studies": [
+        {
+            "url": "https://search.kg.ebrains.eu/instances/306b1877-a5b3-4663-9e38-f82060020f20",
+            "name": "Dendritic action potentials recordings in human layer 2/3 cortical neurons - derived data (v1)",
+            "notebook": "10.1126-science.aax6239/Larkum.ipynb",
+            "comments": [
+                "IB: Some data is missing so unable to reproduce excactly the graphs shown in the publication but otherwise the raw data corresponds well to the graphs presented in the publication.",
+                "AD: summary data directly provided in notebook, not loaded from file",
+                "AD: data are provided in .vsz files, which are for the plotting package https://veusz.github.io/, so it appears we have no raw data",
+                "AD: still, I suppose numbers for graphs are better than nothing, saves having to digitize them from the PDF",
+                "AD: there are some .hoc files, containing neuron reconstructions in hoc format",
+                "AD: the paper mentions NEURON models at https://modeldb.yale.edu/254217 and https://modeldb.yale.edu/260178",
+                "AD: on balance, this is perhaps worth finishing, provided we can extract the data from the Veusz files in a scripted way.",
+                "AD: The .vsz format seems to be text-based, so this seems feasible although not trivial."
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/d82f2571-a365-4265-a7a0-7c3124350088",
+            "name": "Feedforward and Feedback Effects of Microstimulation Reveal Neural Mechanisms of Texture Segregation (v1.0)",
+            "notebook": "10.12751-g-node.pgr84e/Roelfsema-unresolved.ipynb",
+            "comments": [
+                "IB: problem with files, unable to open them index out of range error, unable to open them on matlab too",
+                "AD: looking at the file headers, they appear to be MATLAB 5.0",
+                "AD: scipy.io.loadmat() was able to read at least one of the files ('V1V1_FG_5p.mat'), so worth revisiting this dataset."
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/73bb52d7-d217-4da1-98f8-d81e10063499",
+            "name": "Functional limits of CMOS electrophysiology probes. Are we there yet? (v1)",
+            "notebook": "10.25493-1YN8-1J4/Dimtriadis-unresolved.ipynb",
+            "comments": [
+                "IB: I never had enough space on my computer to download the whole dataset and to explore the material. However, the data seems very well organised and easy to access but unfortunately it is very large (more than 120 gb)",
+                "AD: probably feasible to download just a sample of the dataset",
+                "AD: it does seem to be very well organized, with instructions on how to access different types of data",
+                "AD: worth revisiting"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/87a63af5-06ac-4fec-89e0-b7f1a9d6c192",
+            "name": "Stimulation of the ventral tegmental area in macaques drives category-selective learning in the absence of attention (v1)",
+            "notebook": "10.25493-2WE9-RYF/Vanduffel.ipynb",
+            "comments": [
+                "IB: All the data is very well organized with the codes available to reproduce the figures, either in .py, .m or .R",
+                "AD: Data include csv, MATLAB and Nifti files. Not really electrophysiology.",
+                "AD: the notebook does some analysis/fitting of data from the CSV files, to reproduce some of the figures."
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/73d0b7e2-7e7c-4082-b057-609f8b2ca333",
+            "name": "Laminar recordings from V1 of monkeys performing a figure-ground segregation task",
+            "notebook": "10.25493-6C7V-HKW/Self-unresolved.ipynb",
+            "comments": [
+                "IB: There is only one matfile available and all the data is supposed to be in it. However, it is impossible to know how to use the data as the information about the file provided in the data descriptor is wrong",
+                "AD: Doesn't seem quite as bad as Isaure's initial comment, it seems as though there are extra, undescribed columns",
+                "AD: Worth some further work on this."
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/6ba32f59-e7a0-4cc3-a465-86e1fdf2ffc9",
+            "name": "Hippocampal place cell recordings in a Four-Room navigation task",
+            "notebook": "10.25493-7NJQ-ANH/Spiers-unresolved.ipynb",
+            "comments": [
+                "IB: Can't open files used in publication unable to open on matlab either",
+                "AD: Isaure has tried various libraries to read the .mat files, with limited success",
+                "AD: worth trying again, since h5py and mat73 libraries may have been improved in the meantime"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/c0b127bf-618a-4ac6-ba5d-49614a4a878d",
+            "name": "Ventral midbrain electrical microstimulation induces perceptual learning in primates",
+            "notebook": "10.25493-12X0-NBY/Vanduffel.ipynb",
+            "comments": [
+                "IB: Figure 4 and figure 1b were easily reproduced with the data available on ebrains. However, it was not possible to reproduce any other figure. The significant orientation classification accuracy data was not available, it was therefore not possible to reproduce fig 3b. Furthermore there were only time ranges instead of time values which prevented the reproduction of figure 1a: a Peri-stimulus time histogram of normalized MUA.",
+                "AD: this is primarily an fMRI study, but the dataset does not contain any of the fMRI data, only ephys and ?behavioural data",
+                "AD: I was able to plot the first column of the MUA CSV file (70k data points), need to read the paper to figure out if anything interesting can be done with this."
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/ebbe3627-7411-4e8f-966f-3f12a050b5e4",
+            "name": "Simple and complex spikes of cerebellar Purkinje cells and simultaneously tracked whisker voluntary movement (v1)",
+            "notebook": "10.25493-42NK-RYF/Romano-unresolved.ipynb",
+            "comments": [
+                "IB: 43 PCs recorded during eupneic respiration",
+                "IB: impossible to know which cells were recorded under which conditions",
+                "IB: also most graphs are considering respirations as a factor: no idea when inspiration or expiration is so impossible to reproduce graphs",
+                "IB: also mentions decreasing and increasing PCs ??",
+                "IB: lots of graphs about The raw respiratory signals around the air puff; Raster plots showing respiratory cycles",
+                "IB: Representative PC recordings showing either suppressed (A) or increased (B) simple spike firing upon whisker pad air puff stimulation",
+                "IB: No idea when the whisker pad air puff stimulation occurs",
+                "IB: for each recorded PC during whisker movement without (left) and with (middle) CSs no mention of movement anywhere in data",
+                "AD: quite a lot of information here, worth some further work on this."
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/5b55cc01-8eb2-48fa-967d-d0c6c2c0e67d",
+            "name": "Electrophysiological data of cortical layer 6 neurons and synaptically coupled neuronal pairs (v1)",
+            "notebook": "10.25493-93YQ-6QM/Feldmeyer.ipynb",
+            "comments": [
+
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/830f33f1-cb6e-45ac-9203-11f23e97c273",
+            "name": "EEG and Morris water maze data for Cyclin D2 KO mice and wildtype mice (v1)",
+            "notebook": "10.25493-A2KP-FKD/Sippel.ipynb",
+            "comments": [
+                "IB: It was easy to reproduce most of the figures in the paper. However there was not information to fully reproduce the scatterplots, the researchers had 10 animals and ought therefore to have 10 datapoints but this was never the case and it was impossible to know which data was selected to be plotted on scatterplots. Therefore I was not able to fully repoduce the scatterplots shown on this paper. Furthermore, it was not possible for me to reproduce some boxplots as I was missing information. But overall it was very easy to use the data",
+                "AD: seems promising"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/5a95ceb4-e303-42e3-9558-83b9ccb45976",
+            "name": "Characterizing the input impedance spectrum of pyramidal cells from the intracellular recordings in response to sinuisoidal inputs",
+            "notebook": "10.25493-BPTS-CRR/Zerlaut.ipynb",
+            "comments": [
+                "IB: Easy to reuse the data. Code made available by the researchers",
+                "AD: not surprising, since this dataset is from Yann Zerlaut",
+                "AD: there is a linked model in the KG",
+                "AD: high priority"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/7dc5d5d5-4323-41d6-bdfd-0b841cfe7000",
+            "name": "Whole cell patch-clamp recordings of cerebellar granule cells",
+            "notebook": "10.25493-CHJG-7QC/Tognolina.ipynb",
+            "comments": [
+                "AD: this was worked on by Elodie and myself previously",
+                "AD: probably not too much work needed to polish this up"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/d36336ac-1613-410c-99f6-ac9691545705",
+            "name": "Physiological data recording of interneurons from human temporal neocortex",
+            "notebook": "10.25493-H38T-5C2/Mansvelder-unresolved.ipynb",
+            "comments": [
+                "IB: The whole publication is about when the DHPG was perfused but we have no idea when that happens for each individual cell",
+                "IB: This is the info we have:",
+                "IB: The stimulus intensity was set to evoke a half-maximal current. Pulses were applied every 15 s and a baseline of at least 5 min was recorded after the eEPSC amplitude stabilized. After recording a stable baseline, 25 μM DHPG was perfused into the recording chamber for 5 min.",
+                "IB: So it is possible to calculate when dhppg was applied and compare mebrane potential but only estimates",
+                "IB: Furtheremore, here there is only information about the cells for the first 80 seconds",
+                "IB: No precise info as to when dhpg as applied so really hard to reuse data",
+                "AD: Lots of raw ephys recordings (.abf) so could still be a good case study despite the problems noted by Isaure"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/17196b79-04db-4ea4-bb69-d20aab6f1d62",
+            "name": "Whole cell patch-clamp recordings of cerebellar Golgi cells (v1)",
+            "notebook": "10.25493-JNFA-HDP/Locatelli-unresolved.ipynb",
+            "comments": [
+                "IB: no information about voltage because only one channel available, no information about which cells are which so impossible to reproduce graphs considering that this is how they are separated",
+                "AD: .abf recordings, should be a fairly simple notebook, even if we can't reproduce figures (opportunity for in-depth metadata to come to the rescue?"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/088a7717-76d2-4520-b9e8-3f2fecce1ee4",
+            "name": "The essential role of feedback processing for figure-ground perception in mice (v1)",
+            "notebook": "10.25493-KXJV-K22/Roelfsema.ipynb",
+            "comments": [
+                "IB: Very easy to reuse the data. Code for the other figures can be found in the EBRAINS dataset and can be opened with MATLAB, I verified the validity and accuracy of the code.",
+                "AD: notebook not very interesting so far, mostly just plotting summary data, however the dataset seems to have a _lot_ of stuff, would be interesting to see how much is raw data"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/3ca4af33-64bd-437a-9c53-2dac19e10168",
+            "name": "Whole cell patch-clamp recordings of cerebellar stellate cells (v1)",
+            "notebook": "10.25493-M1AQ-3AC/Angelo-unresolved.ipynb",
+            "comments": [
+                "IB: Cells used to create certain figures in the publication have specific conditions e.g.: 10 pulses @ 100 Hz-delivered But unable to reproduce the same results with cells under this condition so lacking data or I was unable to exploit the data accurately",
+                "AD: .abf recordings. Maybe consider making a single notebook for all cerebellar patch-clamp recordings from d'Angelo lab?"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/476f9d47-d7b4-4ee0-a0a1-3ec075a10069",
+            "name": "Neuronal activity elicited by figure-ground stimuli in primary visual cortex of the awake mouse (v1)",
+            "notebook": "10.25493-NHHM-1S5/Roelfsema2.ipynb",
+            "comments": [
+                "IB: the data is processed directly in matlab everything is very detailed and processed correctly. Below are 3 examples extracted directly from matlab",
+                "AD: so far the notebook just shows summary data pasted directly. Need to read data from file, and show the raw data."
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/26e3a8c8-ac21-44cb-bf0d-ead2dcd1c4bb",
+            "name": "Multiunit recordings from visual areas in monkeys performing a detection task (v1))",
+            "notebook": "10.25493-REHY-EEX/Roelfsema-unresolved.ipynb",
+            "comments": [
+                "IB: Didn't have enough space to download the whole dataset (more than 70 gb) bt seems rather easy to use once downloaded",
+                "AD: easy enough to download only part of the dataset; lots of ephys recordings in matlab format"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/07554ebd-95a2-46f0-8065-d961d56ce098",
+            "name": "Excitability of mouse hippocampal CA1 pyramidal neurons during sustained (500 ms) strong depolarization (v1)",
+            "notebook": "10.25493-VAV5-BXU/Garad.ipynb",
+            "comments": [
+                "IB: Missing a lot of data, only data from one laboratory (two were mentionned in the figures) was available and no data to create the model graphs. Furthermore, impossible to access different segments in the ABF file so I was only able to create membrane potential / time graphs.",
+                "AD: .abf recordings",
+                "AD: linked to Bianchi model?"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/1e311509-1dba-437b-b9bf-396ab6ccb553",
+            "name": "Population and single cell receptive field maps from mouse visual cortex (v1)",
+            "notebook": "10.25493-VKV1-X9C/Self.ipynb",
+            "comments": [
+                "IB: Data very easy to reuse. Code for the other figures can be found in the EBRAINS dataset and can be opened with MATLAB.",
+                "AD: calcium imaging + extracellular ephys, MATLAB"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/4016ea85-aa19-470b-98b2-28448873ba03",
+            "name": "Two-photon fluorescence microscopy and calcium imaging of cerebellar slices (v1)",
+            "notebook": "10.25493-XMPH-MTS/Tognolina-unresolved.ipynb",
+            "comments": [
+                "IB: Lots of files that I was unable to open: .rsm, .rsh, .rsd. Some .mat files but no idea what they corresponded to and which data they contained.",
+                "AD: purely fluoresence imaging, no ephys, not a priority"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/c76ee58e-2187-4b33-ad45-cf1ea7ab0d65",
+            "name": "Recordings of spiking activity and local field potentials from Human Visual Cortex V3 (v1)",
+            "notebook": "10.25493-XYBY-XYG/Self-unresolved.ipynb",
+            "comments": [
+                "IB: Mentions area E6 and E7 but no idea how to seperate these in mat files. also mentions power change no idea what it is, could be linked to local field potential",
+                "AD: 'This data requires you to explicitly request access with your EBRAINS account' - not a good candidate for a tutorial"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/53f3023c-4299-41b9-898b-821ed8e65545",
+            "name": "Optogenetic stimulation of the cerebellar cortex in in vivo anesthetized mice (v1)",
+            "notebook": "10.25493-YFQ9-MCP/Angelo-unresolved.ipynb",
+            "comments": [
+                "IB: .tbk files unsure how to read them. Tried opening them with Neo but didn't get useful results.",
+                "AD: maybe Tucker-Davis Tank format? Not much in the notebook so far, but maybe worth pursuing, medium priority."
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/bd5f91ff-e829-4b85-92eb-fc56991541f1",
+            "name": "Excitability profile of CA1 pyramidal neurons in APPPS1 Alzheimer disease mice and control littermates (v1)",
+            "notebook": "10.25493-YJFW-HPY/Marie.ipynb",
+            "comments": [
+                "PUBLISHED: https://github.com/NeuroPSI-Neuroinformatics/case-studies-for-data-reuse/tree/main/10.25493-YJFW-HPY"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/c57e7440-f403-4f55-8461-a0874c4f45e8",
+            "name": "The contribution of NMDA and AMPA receptors to persistent firing in the dorsolateral prefrontal cortex in working memory",
+            "notebook": "10.25493-ZQ9T-N4T/Roelfsema3.ipynb",
+            "comments": [
+                "IB: All the code was made available by the researchers and can be run with Matlab. Verification of the data treatment and processing ensures the validity of the figures presented in the publication. Here are two examples of figures that were plotted from the matlab data.",
+                "IB: Very complicated to read the data directly from the .mat files. Instead I retrieved them from Matlab where I ran the codes made available by the researchers.",
+                "AD: notebook should be redone, reading the .mat files in Python"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/ba5c166a-6862-40ce-bfd7-7720b6e39015",
+            "name": "Recordings of excitatory postsynaptic potentials from striatal neurons (v1)",
+            "notebook": "10.25493-487V-4AQ.ipynb",
+            "comments": [
+                "IB: Some code is available but it needs files that are not available in the ebrains dataset so impossible to make it run. /trace_table.txt-parameters.json is missing from the data depository",
+                "AD: lots of Python code in this dataset; worth pursuing, but will probably be quite a lot of work."
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/f25ec9c9-2348-4a62-a6af-907d389f263d",
+            "name": "Cholinergic interneurons in the striatum - Single cell patch clamp recordings (v1)",
+            "notebook": "10.25493:VW70-659.ipynb",
+            "comments": [
+                "IB: From the publication we ought to have current, voltage, somatic distance values. However, no idea how to find these in the .mat files",
+                "IB: for pxp files managed to open with neo but not able to create graphs",
+                "AD: notebook is trying to open .pxp files with Neo's ExampleIO",
+                "AD: worth another look"
+            ]
+        },
+        {
+            "url": "https://search.kg.ebrains.eu/instances/f25ec9c9-2348-4a62-a6af-907d389f263d",
+            "name": "Electrophysiological recordings of striatal projection neurons (v1)",
+            "notebook": "10.25493-MZE0-BH5/10.25493-MZE0-BH5.ipynb",
+            "comments": [
+                "IB: Didn't have enough time to explore but this notebook is an example of the code that was provided by the researchers. It is very complete as it explains the data and shows how we can exploit it so I am almost certain that it would be very easy to reproduce figures used in the publication. ",
+                "AD: seems promising."
+            ]
+        }
+    ]
+}
